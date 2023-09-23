@@ -5,7 +5,7 @@ echo CustomComm
 echo Version: 1.0.0 (Q3 2023)
 echo By Lucas Gabriel (lucmsilva)
 echo.
-echo Help (cchelp):
+echo Help (cchelp, ccver):
 echo   Commands:
 echo     - cchelp - Help command.
 echo     - ccver - Same as "cchelp". Help command.
