@@ -12,3 +12,4 @@ echo     - ccver - Same as "cchelp". Help command.
 echo     - ls - Similar to "dir". Usage: ls ^<folder^>
 echo     - back - Similar to "cd ..".
 echo     - clear - Similar to "cls".
+echo     - display - Display ".txt" files. Usage: display ^<file^>
