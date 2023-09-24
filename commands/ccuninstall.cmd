@@ -11,7 +11,6 @@ REM  --> Check for permissions
 
 REM --> If error flag set, we do not have admin.
 if '%errorlevel%' NEQ '0' (
-    echo Requesting administrative privileges...
     goto UACPrompt
 ) else ( goto gotAdmin )
 
@@ -30,14 +29,17 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------
 
 chcp 65001 > nul
-del %SystemRoot%\back.cmd & del %SystemRoot%\nav.cmd & del %SystemRoot%\cchelp.cmd & del %SystemRoot%\ccver.cmd & del %SystemRoot%\ln.cmd & del %SystemRoot%\display.cmd & del %SystemRoot%\ls.cmd & del %SystemRoot%\ls.cmd & del %SystemRoot%\clear.cmd
+
+echo Uninstalling CustomComm... & echo. & del %SystemRoot%\back.cmd & del %SystemRoot%\nav.cmd & del %SystemRoot%\cchelp.cmd & del %SystemRoot%\ccver.cmd & del %SystemRoot%\ln.cmd & del %SystemRoot%\display.cmd & del %SystemRoot%\ls.cmd & del %SystemRoot%\clear.cmd
 echo.
 
 echo #ccuninstall > %SystemDrive%\ccuninstall.log
+echo. >> %SystemDrive%\ccuninstall.log
 for /f "delims=" %%a in ('wmic os get LocalDateTime ^| find "."') do set datetime=%%a
 set datetime=%datetime:~0,14%
 set datetime=%datetime:~0,4%/%datetime:~4,2%/%datetime:~6,2% %datetime:~8,2%:%datetime:~10,2%:%datetime:~12,2%
 echo Uninstalled at %datetime% >> %SystemDrive%\ccuninstall.log
+echo. >> %SystemDrive%\ccuninstall.log
 echo The uninstaller cannot be deleted. >> %SystemDrive%\ccuninstall.log
 echo Run "del %SystemRoot%\ccuninstall.cmd" >> %SystemDrive%\ccuninstall.log
 

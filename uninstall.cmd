@@ -11,7 +11,6 @@ REM  --> Check for permissions
 
 REM --> If error flag set, we do not have admin.
 if '%errorlevel%' NEQ '0' (
-    echo Requesting administrative privileges...
     goto UACPrompt
 ) else ( goto gotAdmin )
 
@@ -30,7 +29,8 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------
 
 chcp 65001 > nul
-del %SystemRoot%\back.cmd & del %SystemRoot%\nav.cmd & del %SystemRoot%\cchelp.cmd & del %SystemRoot%\ccver.cmd & del %SystemRoot%\ln.cmd & del %SystemRoot%\display.cmd & del %SystemRoot%\ls.cmd & del %SystemRoot%\ls.cmd & del %SystemRoot%\clear.cmd
+
+echo Uninstalling CustomComm... & echo. & del %SystemRoot%\back.cmd & del %SystemRoot%\nav.cmd & del %SystemRoot%\cchelp.cmd & del %SystemRoot%\ccver.cmd & del %SystemRoot%\ln.cmd & del %SystemRoot%\display.cmd & del %SystemRoot%\ls.cmd & del %SystemRoot%\clear.cmd
 echo.
 
 echo #ccuninstall > %SystemDrive%\ccuninstall.log
