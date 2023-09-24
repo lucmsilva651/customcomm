@@ -4,6 +4,8 @@ echo.
 echo CustomComm - Q3 2023
 echo By Lucas Gabriel (lucmsilva)
 echo.
+echo Installed at: %~dp0
+echo.
 echo Help (cchelp, ccver):
 echo   Commands:
 echo     - ccuninstall - Uninstall CustomComm.

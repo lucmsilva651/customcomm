@@ -30,5 +30,7 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------
 
 chcp 65001 > nul
-copy commands\* %SystemRoot%
+setx PATH "%PATH%;%SystemRoot%\ccomm"
+mkdir %SystemRoot%\ccomm
+xcopy "commands\*" "%SystemRoot%\ccomm" /s /e /y
 exit
