@@ -29,5 +29,6 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------
 
+chcp 65001 > nul
 copy commands\* %SystemRoot%
 exit
