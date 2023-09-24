@@ -6,7 +6,7 @@ echo By Lucas Gabriel (lucmsilva)
 echo.
 echo Help (cchelp, ccver):
 echo   Commands:
-echo     - ccuninstall - Uninstall CustomComm from Windows.
+echo     - ccuninstall - Uninstall CustomComm.
 echo     - cchelp - Help command.
 echo     - ccver - Help command. Same as "cchelp".
 echo     - ls - List files in the directory. Usage: ls ^<folder^>
