@@ -30,7 +30,11 @@ if '%errorlevel%' NEQ '0' (
 
 chcp 65001 > nul
 
-echo Uninstalling CustomComm... & echo. & del %SystemRoot%\back.cmd & del %SystemRoot%\nav.cmd & del %SystemRoot%\cchelp.cmd & del %SystemRoot%\ccver.cmd & del %SystemRoot%\ln.cmd & del %SystemRoot%\display.cmd & del %SystemRoot%\ls.cmd & del %SystemRoot%\clear.cmd
+echo Uninstalling CustomComm...
+echo. 
+del %SystemRoot%\ccomm
+setx PATH "%PATH:;%SystemRoot%\ccomm=%"
+
 echo.
 
 echo #ccuninstall > %SystemDrive%\ccuninstall.log
@@ -43,8 +47,5 @@ echo. >> %SystemDrive%\ccuninstall.log
 echo The uninstaller cannot be deleted. >> %SystemDrive%\ccuninstall.log
 echo Run "del %SystemRoot%\ccuninstall.cmd" >> %SystemDrive%\ccuninstall.log
 
-echo The uninstaller cannot be deleted.
-echo Run "del %SystemRoot%\ccuninstall.cmd"
-echo.
 pause
 exit

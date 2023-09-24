@@ -47,8 +47,5 @@ echo. >> %SystemDrive%\ccuninstall.log
 echo The uninstaller cannot be deleted. >> %SystemDrive%\ccuninstall.log
 echo Run "del %SystemRoot%\ccuninstall.cmd" >> %SystemDrive%\ccuninstall.log
 
-echo The uninstaller cannot be deleted.
-echo Run "del %SystemRoot%\ccuninstall.cmd"
-echo.
 pause
 exit
